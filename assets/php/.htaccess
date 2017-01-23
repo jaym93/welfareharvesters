@@ -1,0 +1,10 @@
+
+# Proxy rules for BaseKit site: "welfareharvesters.in"
+DirectoryIndex index.html
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^welfareharvesters.in$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.welfareharvesters.in$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ http://welfareharvestersin.hostgator.co.in/$1 [P,L]
+# END proxy rules for "welfareharvesters.in"
